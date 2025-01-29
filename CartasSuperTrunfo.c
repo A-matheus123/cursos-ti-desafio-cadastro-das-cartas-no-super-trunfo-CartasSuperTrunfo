@@ -45,7 +45,7 @@ int main() {
     printf("Pib da cidade: %.2f \n", pib);
     printf("Número de pontos turísticos: %d \n \n", pturisticos);
 
-    // E assim termina o cadastro das cartas, espero ter dado tudo que foi pedido nesse desafio!
+    //E assim termina o cadastro das cartas, espero ter dado tudo que foi pedido nesse desafio!
 
     return 0;
 
