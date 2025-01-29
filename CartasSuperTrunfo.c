@@ -1,51 +1,53 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
 
-    int codigoc = 1000;
-    int pturisticos = 32;
-    char nome[50] = "Brasília";
-    float pib = 328.8; //Em bilhões
-    double populacao = 2.817; //Em milhões
-    double area = 5.779; //Km2
+    //Comecei pelas variáveis:
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    printf("Código da cidade: \n");
-    scanf("%d", &codigoc);
-    
-    printf("Nome da cidade: \n");
-    scanf("%s", &nome);
+    char estado = "A"; //Usei o char (que indica apenas um caractere) para indicar o estado.
+    char codigoc[10] = "A01"; //Usei o char "nome"[] (que indica uma cadeia de caracteres) para indicar o código da cidade.
+    char nomecidade[50] = "Brasília"; //Usei novamente o char "nome"[] (que indica uma cadeia de caracteres) para indicar o nome da cidade.
+    float populacao = 2.817; //Usei o float (que indica um número flutuante) para indicar a população, pois quando eu coloquei int (para número inteiro) eu não estava conseguindo interagir no scanf da área. População está em milhões.
+    float area = 5779.14; //Usei o float (que indica um número flutuante) novamente para indicar a área da cidade em Km2.
+    float pib = 328.8; //Usei mais uma vez o float (que indica um número flutuante) para indicar o PIB da cidade em bilhões de reais.
+    int pturisticos = 32; //Usei o int (que indica números inteiros) para indicar o número de pontos turísticos.
 
-    printf("Área da cidade: \n");
-    scanf("%f", &area);
+    //Variáveis prontas, agora começo a interagir com o usuário usando a combinação estudada "printf" e "scanf":
 
-    printf("População da cidade: \n");
-    scanf("%f", &populacao);
+    printf("Digite o código do estado: \n"); //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("%c", &estado); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
 
-    printf("Número de pontos turísticos: \n");
-    scanf("%d", &pturisticos);
+    printf("Digite o código da cidade: \n"); //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("%s", &codigoc); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
 
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    printf("Código da cidade: %d \n", codigoc);
-    printf("Nome da cidade: %s \n", nome);
+    printf("Digite o nome da cidade: \n");  //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("%s", &nomecidade); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
+
+    printf("Digite a População da cidade: \n"); //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("%f", &populacao); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
+
+    printf("Digite a área da cidade: \n"); //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("  %f", &area); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
+
+    printf("Digite o PIB da cidade: \n"); //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("%f", &pib); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
+
+    printf("Digite o número de pontos turísticos: \n");  //Com esse printf, irá aparecer no terminal o texto escrito.
+    scanf("%d", &pturisticos); //Esse scanf permitirá que o usuário interaja com o programa através do terminal.
+
+    //Depois que o usuário respondeu através do terminal, eu uso novamente a função printf para imprimir os dados digitados pelo usuário:
+
+    printf("\nEstado: %c \n", estado);
+    printf("Código da cidade: %s \n", codigoc);
+    printf("Nome da cidade: %s \n", nomecidade);
+    printf("População da cidade: %.2f \n", populacao);
     printf("Área da cidade: %.2f \n", area);
-    printf("População da cidade: %.2f \n");
-    printf("Número de pontos turísticos %d \n", pturisticos);
+    printf("Pib da cidade: %.2f \n", pib);
+    printf("Número de pontos turísticos: %d \n \n", pturisticos);
 
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //E assim termina o cadastro das cartas, espero ter dado tudo que foi pedido nesse desafio!
 
     return 0;
+
+
 }
